@@ -14,6 +14,11 @@ public class ConvertTool {
         writeFile(json, file.getName().substring(0, file.getName().indexOf(".")) + ".json");
     }
 
+    /**
+     * 将JSON写入文件
+     * @param json
+     * @param fileName
+     */
     private static void writeFile(String json, String fileName) {
         File file = new File(fileName);
 
@@ -27,6 +32,11 @@ public class ConvertTool {
         }
     }
 
+    /**
+     * 读取SD文件内容
+     * @param file
+     * @return
+     */
     private static String readFile(File file) {
 
         StringBuffer sb = new StringBuffer();
@@ -45,6 +55,11 @@ public class ConvertTool {
         return sb.toString();
     }
 
+    /**
+     * 解析文件内容字符串
+     * @param str
+     * @return
+     */
     private static List<Map<String, String>> convertStringToMap(String str) {
         System.out.println(str);
         List<Map<String, String>> resultList = new ArrayList<>();
